@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<context:component-scan base-package="cn.com.leadfar"></context:component-scan>
+	
+	<bean id="userService" class="cn.com.leadfar.spring.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<aop:config>
+		<!-- pointcut表示拦截什么，advice-ref表示拦截之后调用什么 -->
+		<aop:pointcut id="allServiceMethods" expression="execution(* cn.com.leadfar.spring.service.*.*(..))"/>
+		<aop:advisor advice-ref="transactionManager" pointcut-ref="allServiceMethods"/>
+		<aop:advisor advice-ref="myAfterAdvice" pointcut-ref="allServiceMethods"/>
+		<aop:advisor advice-ref="logManager" pointcut-ref="allServiceMethods"/>
+	</aop:config>
+</beans>
