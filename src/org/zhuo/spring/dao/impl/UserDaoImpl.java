@@ -1,8 +1,7 @@
-package cn.com.leadfar.spring.dao.impl;
+package org.zhuo.spring.dao.impl;
 
 import org.springframework.stereotype.Repository;
-
-import cn.com.leadfar.spring.dao.UserDao;
+import org.zhuo.spring.dao.UserDao;
 
 @Repository("userDao")
 public class UserDaoImpl implements UserDao {

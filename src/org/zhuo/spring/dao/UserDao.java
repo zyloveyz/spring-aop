@@ -1,4 +1,4 @@
-package cn.com.leadfar.spring.dao;
+package org.zhuo.spring.dao;
 
 public interface UserDao {
 	public void save();

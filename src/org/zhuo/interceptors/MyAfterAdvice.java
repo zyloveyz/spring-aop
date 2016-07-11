@@ -1,4 +1,4 @@
-package cn.com.leadfar.interceptors;
+package org.zhuo.interceptors;
 
 import java.lang.reflect.Method;
 

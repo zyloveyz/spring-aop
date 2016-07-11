@@ -1,9 +1,9 @@
-package cn.com.leadfar.spring.actions;
+package org.zhuo.spring.actions;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.zhuo.spring.actions.UserAction;
 
-import cn.com.leadfar.spring.actions.UserAction;
 import junit.framework.TestCase;
 
 public class UserActionTest extends TestCase {

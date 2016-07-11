@@ -13,15 +13,15 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd
        http://www.springframework.org/schema/aop 
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
-	<context:component-scan base-package="cn.com.leadfar"></context:component-scan>
+	<context:component-scan base-package="org.zhuo"></context:component-scan>
 	
-	<bean id="userService" class="cn.com.leadfar.spring.service.impl.UserServiceImpl">
+	<bean id="userService" class="org.zhuo.spring.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
 	<aop:config>
 		<!-- pointcut表示拦截什么，advice-ref表示拦截之后调用什么 -->
-		<aop:pointcut id="allServiceMethods" expression="execution(* cn.com.leadfar.spring.service.*.*(..))"/>
+		<aop:pointcut id="allServiceMethods" expression="execution(* org.zhuo.spring.service.*.*(..))"/>
 		<aop:advisor advice-ref="transactionManager" pointcut-ref="allServiceMethods"/>
 		<aop:advisor advice-ref="myAfterAdvice" pointcut-ref="allServiceMethods"/>
 		<aop:advisor advice-ref="logManager" pointcut-ref="allServiceMethods"/>

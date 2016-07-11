@@ -1,11 +1,10 @@
-package cn.com.leadfar.spring.actions;
+package org.zhuo.spring.actions;
 
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-
-import cn.com.leadfar.spring.service.UserService;
+import org.zhuo.spring.service.UserService;
 
 @Controller
 @Scope("prototype")

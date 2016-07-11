@@ -1,7 +1,7 @@
-package cn.com.leadfar.spring.service.impl;
+package org.zhuo.spring.service.impl;
 
-import cn.com.leadfar.spring.dao.UserDao;
-import cn.com.leadfar.spring.service.UserService;
+import org.zhuo.spring.dao.UserDao;
+import org.zhuo.spring.service.UserService;
 
 public class UserServiceImpl implements UserService {
 

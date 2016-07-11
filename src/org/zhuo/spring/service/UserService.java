@@ -1,4 +1,4 @@
-package cn.com.leadfar.spring.service;
+package org.zhuo.spring.service;
 
 public interface UserService {
 	public void add();
