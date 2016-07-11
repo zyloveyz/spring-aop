@@ -15,7 +15,7 @@ public class UserAction {
 	private UserService userService;
 	
 	public UserAction() {
-		System.out.println(this+"±»´´½¨ÁË£¡");
+		System.out.println(this+"è¢«åˆ›å»ºäº†ï¼");
 	}
 
 	public String add(){

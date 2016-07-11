@@ -8,19 +8,22 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 	
 	public UserServiceImpl() {
-		System.out.println(this+"±»´´½¨ÁË£¡");
+		System.out.println(this+"è¢«åˆ›å»ºäº†ï¼");
 	}
 
+	@Override
 	public void add() {
 		System.out.println(this+".add()");
 		userDao.save();
 	}
 
+	@Override
 	public void del() {
 		// TODO Auto-generated method stub
 
 	}
 
+	@Override
 	public void update() {
 		// TODO Auto-generated method stub
 

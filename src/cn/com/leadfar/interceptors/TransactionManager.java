@@ -10,11 +10,11 @@ public class TransactionManager implements MethodInterceptor {
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		
-		//Ö®Ç°¸ÉµãÊ²Ã´
+		//ä¹‹å‰å¹²ç‚¹ä»€ä¹ˆ
 		System.out.println("open session,begin transaction");
 		
 		try {
-			//¼ÌĞøÍùÏÂ
+			//ç»§ç»­å¾€ä¸‹
 			Object returnValue = invocation.proceed();
 			
 			System.out.println("commit transaction");
